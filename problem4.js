@@ -6,15 +6,12 @@ function calculateFinalScore(obj) {
     const testScore = obj.testScore
     const schoolGrade = obj.schoolGrade
     let parentProfession = obj.isFFamily
-
     if(obj.isFFamily === true){
          parentProfession = 20
     }else if (obj.isFFamily === false){
          parentProfession = 0
     }
-    
     const FinalScore = testScore + schoolGrade + parentProfession
-
     if(FinalScore >= 80){
         return "true"
     }else{
@@ -22,6 +19,11 @@ function calculateFinalScore(obj) {
     }
 }
 
-const properties ={ name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : true  } 
-const count = calculateFinalScore(properties)
-console.log(count)
+
+
+
+// console.log(calculateFinalScore({ name: "Rajib", testScore: 45,  schoolGrade: 25, isFFamily : true  }))
+// console.log(calculateFinalScore({ name: "Rajib", testScore: 45,  schoolGrade: 25, isFFamily : false}))
+// console.log(calculateFinalScore("hello" ))
+// console.log(calculateFinalScore({ name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : true}))
+
